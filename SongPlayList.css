@@ -1,0 +1,318 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    
+    
+}
+body{
+  width: 100vw;
+  box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* header -containers */
+
+#header-container{
+   text-align: center;
+   font-size: 1.5rem;
+   padding: 20px;
+   background-color: rgba(66, 50, 147, 0.9);
+   display: flex;
+   justify-content: space-between;
+}
+
+/* Slider styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+  }
+
+  #toggle-theme{
+    margin-top: 10px;
+    align-items: center;
+  }
+  
+  .switch input {
+    display: none;
+    
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+   #mode-theme-text{
+    position: absolute;
+    left: -60px;
+   }
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 0px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(20px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* Dark mode styles */
+.dark-mode {
+    /* Define styles for dark mode here */
+    background-color: rgba(13, 13, 14, 1);
+   
+ }
+
+ #header-title{
+    margin-left: 70px;
+    font-family: 'sans-serif';
+ }
+
+
+ 
+ /* container */
+ .container{
+  margin: 30px;
+   display: flex;
+   flex-basis: 30%;
+   justify-content: space-around;
+ }
+ /* allsongs container */
+ .container > div{
+   height: 105vh;
+   background-color: rgba(114, 97, 170, 0.2);
+ }
+
+ .container > div:nth-child(1)
+ {
+  width: 23vw;
+ }
+ .container > div:nth-child(2)
+ {
+  width: 45vw;
+ }
+ .container > div:nth-child(3)
+ {
+  width: 23vw;
+ }
+
+
+ /* all songs container line-no:26-57*/
+ .all-songs-container{
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 20px;
+   gap:2rem;
+ }
+ 
+
+ /* filter generes  28-45*/
+ .genere-input-filter{
+     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+ }
+
+ #filter-generes-drop{
+  background-color: rgba(29, 87, 141, 0.5);
+   padding: 5px;
+   font-size: 1rem;
+   border-radius: 12px;
+   height: 30px;
+   outline: none;
+   border: none;
+ }
+
+
+ /* all-songs-list 50-59 */
+ #song-Generes-types{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+ }
+
+.song-info > button,.playList > button{
+  height: 50px;
+  border: none;
+   background-color:rgba(66, 50, 147, 0.9);
+   color: white;
+   margin: 15px;
+   border-radius: 10px;
+   height: 30px;
+  font-size: 0.9rem;
+  padding : 5px 20px;
+  overflow: hidden;
+  width: 230px;
+}
+
+.song-info > button:hover , .playList > button{
+  cursor: pointer;
+}
+.all-songs-list{
+  overflow-y: scroll;
+}
+
+
+/* song card container line-no:63 */
+.song-card-container > *{
+  width: 90%;
+  margin: auto;
+}
+.song-card
+{
+  border-radius: 10px;
+  min-height: 330px;
+  margin: 30px auto;
+   background-color: rgba(66, 50, 147, 0.9);
+   overflow: hidden;
+}
+
+.song-image-card img{
+    display: block;
+    width: 100%;
+    max-height: 350px;
+}
+
+.song-details{
+   display: flex;
+   gap: 1rem;
+   padding: 10px 20px;
+   flex-direction: column;
+}
+
+
+audio{
+  width: 85%;
+  margin-left: 7.5%;
+
+}
+
+
+.playlist-controls{
+   display: flex;
+   justify-content: space-evenly;
+   margin: 30px auto  ;
+}
+
+.playlist-controls  button{
+  font-size: 1rem;
+  color: white;
+   padding: 14px 30px;
+   outline:none;
+   border: none;
+   border-radius: 10px;
+   background-color: rgba(66, 50, 147, 0.9);  
+}
+
+
+
+/* play-list-container line:73-102 */
+.input-playlist{
+   display: flex;
+   justify-content: space-around;
+   margin: 20px 0px;
+   font-size: 1.3rem;
+   
+}
+
+#playlist-user-text{
+   border: none;
+   outline: none;
+   height: 30px;
+   text-align: center;
+   border-radius: 5px;
+   background-color: rgba(126, 115, 173, 0.5);
+   color: rgb(250, 248, 252);
+}
+
+#playlist-create-btn{
+  border: none;
+  height: 30px;
+  padding: 0px 10px;
+  background-color:rgba(66, 50, 147, 0.9);
+  border-radius: 5px;
+  color: white;
+}
+
+/* Your existing CSS styles remain the same */
+
+/* Responsive Styles */
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .all-songs-container {
+    order: 2; /* This will make .all-songs-container appear third */
+  }
+  
+  .song-card-container {
+    order: 1; /* This will make .song-card-container appear first */
+  }
+  
+  .play-list-container {
+    order: 3; /* This will make .play-list-container appear second */
+  }
+ .container > div:nth-child(2), .container > div:nth-child(3),.container > div:nth-child(1)
+ {
+  width: 95%;
+ }
+
+  
+}
+
+/* Additional media queries for other screen sizes as needed */
+.title{
+  font-size: 2rem;
+
+}
+ .p-t{
+   padding-top: 0px ;
+ }
+ .m-t{
+   margin: 10px;
+ }
+ .t-center{
+   text-align: center;
+ }
+ .w-150{
+   width: 150%;
+ }

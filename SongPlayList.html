@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player App</title>
+
+    <meta content="" name="Ganesh Studio's Music Player is a modern, classic and easy to use Web Music Player with interactive UI" />
+    <meta name="description" content="Ganesh Studio's Music Player is a modern, classic and easy to use Web Music Player with interactive UI" />
+    <meta name="keywords" content="Ganesh, Studio, GaneshStudio, Music, Player" />
+    <link rel="icon" href="/Pictures/icon.png" type="image/png">
+
+    <link href="SongPlayList.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+    
+    <header id="header-container">
+        <div id="header-title">
+            <h2>Map your Feel</h2>
+        </div>
+        <div id="toggle-theme">
+            <label class="switch">
+                 <span id="mode-theme-text">Light</span>
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="all-songs-container">
+            <!-- filter for generes -->
+            <div class="genere-input-filter">
+
+                <!-- label for the generes dropdown -->
+                <div class="filter-label">
+                    <label for="filter-drop">Filter by Genere:</label>
+                </div>
+
+                <!-- generes options -->
+                <div class="genere-options">
+                    <select id="filter-generes-drop">
+
+                        <option value="All">All</option>
+                        <option value="Hip-hop">Hip-hop</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Classical">Classical</option>
+
+                    </select>
+               </div>
+            </div>
+
+            <div class="all-songs-list">
+                <!-- title for the all songs list -->
+                <div class="all-songs-title">
+                    <h2 class="title m-t" >All Songs</h2>
+                </div>
+                <div id="song-Generes-types">
+                     
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- song card container  -->
+        <div class="song-card-container">
+              
+            <div class="song-card">
+                  <div class="song-image-card">
+                      <img src="mood2.png" alt="not founded">
+                  </div>
+                  <div class="song-details">
+                       <div class="song-title">
+                         
+                         <h2 class="title">Song Name</h2>
+                       </div>
+                       <div class="song-writer">
+                            Singer Name
+                       </div>
+                  </div>
+            </div>
+            
+            <div id="audioControls">
+                <audio controls>
+                    <!-- <source src="songs/[iSongs.info] 01 - Nandanandanaa.mp3" type="audio/mp3"> -->
+                </audio>
+            </div>
+            
+
+            <div class="playlist-controls">
+                  <div class="previous">
+                    <button id="prev-song">pervious song</button>
+                  </div>
+                  <div class="next">
+                    <button id="next-song">next song</button>
+                  </div>
+                  <div class="add-to-playlist">
+                     <button id="add-to-list">Add to PlayList</button>
+                  </div>
+            </div>
+            
+        </div>
+
+
+
+       <!-- play list container -->
+        <div class="play-list-container">
+
+            <div class="input-playlist">
+
+                <div class="playlist-user-input">
+                  <input id="playlist-user-text" type="text" placeholder="Enter playlist name">
+                </div>
+                <div class="playlist-user-btn">
+                    <button id="playlist-create-btn">create PlayList</button>
+                </div>
+
+            </div>
+
+            <div class="user-current-playList">
+                <h2 class="m-t" >Current PlayList</h2>
+                <div id="all-song" class="PlayList">
+                   
+               </div>
+            </div>
+             
+            <div class="add-all-playList">
+                <h2 class="m-t" >All PlayList</h2>
+                <div id="all-song" class="playList ">
+                    
+               </div>
+            </div>
+
+
+        </div>
+    </section>
+    
+    <script src="SongPlayList.js"></script>
+    <script src="updatedSongEvents.js"></script>
+</body>
+</html>
